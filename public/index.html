@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSTREE DATASET</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css"/>
+</head>
+<body>
+<input type="text" id="search" placeholder="Search">
+<div id="jstree_demo_div"></div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.4/jstree.min.js"></script>
+<script>
+    $(function () {
+
+        $.getJSON("https://us-central1-treedataset.cloudfunctions.net/jsTree", function (json) {
+
+            $('#jstree_demo_div').jstree({
+                'core': {
+                    'data': json
+                },
+                "plugins": ["search"]
+            });
+
+            var to = false;
+            $('#search').keyup(function () {
+                if (to) {
+                    clearTimeout(to);
+                }
+                to = setTimeout(function () {
+                    var v = $('#search').val();
+                    $('#jstree_demo_div').jstree(true).search(v);
+                }, 250);
+            });
+        });
+
+    });
+</script>
+</html>

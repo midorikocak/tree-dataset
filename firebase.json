@@ -1,0 +1,24 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/withChildren",
+        "function": "withChildren"
+      },
+      {
+        "source": "/graph",
+        "function": "createGraph"
+      },
+      {
+        "source": "/jstree",
+        "function": "jsTree"
+      }
+    ]
+  }
+}

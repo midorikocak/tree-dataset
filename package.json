@@ -1,0 +1,22 @@
+{
+  "name": "tree-dataset",
+  "version": "1.0.0",
+  "description": "read tree data from xml, make it linear and create tree again.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tree",
+    "dataset"
+  ],
+  "author": "Midori Kocak mtkocak@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "eyes": "^0.1.8",
+    "firebase": "^4.6.2",
+    "firebase-admin": "^5.5.1",
+    "firebase-functions": "^0.7.3",
+    "xml2js": "^0.4.19"
+  }
+}

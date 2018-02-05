@@ -1,0 +1,26 @@
+{
+    "name": "midorikocak/dataset",
+    "description": "read tree data from xml, make it linear and create tree again.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "midorikocak",
+            "email": "mtkocak@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "MidoriKocak\\": "src/"
+        },
+        "psr-0": {
+            "MidoriKocakTest\\": "tests/"
+        }
+    },
+    "require": {
+        "fabpot/goutte": "^3.2@dev",
+        "phpunit/phpunit": "^6.5@dev",
+        "kreait/firebase-php": "^3.0@dev"
+    }
+}
